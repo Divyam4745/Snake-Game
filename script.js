@@ -1,6 +1,6 @@
-/*
+/* ===========================================
    DOM ELEMENTS
- */
+=========================================== */
 
 const board = document.getElementById("board");
 
@@ -17,9 +17,9 @@ const restartBtn = document.getElementById("restartBtn");
 const finalScore = document.getElementById("finalScore");
 
 
-/* 
+/* ===========================================
    BOARD SETTINGS
- */
+=========================================== */
 
 const ROWS = 15;
 const COLS = 20;
@@ -29,9 +29,9 @@ const TOTAL_CELLS = ROWS * COLS;
 let cells = [];
 
 
-/* 
+/* ===========================================
    GAME VARIABLES
- */
+=========================================== */
 
 let snake = [
     { x: 7, y: 5 }
@@ -60,9 +60,9 @@ let gameStarted = false;
 let paused = false;
 
 
-/* 
+/* ===========================================
    CREATE BOARD
- */
+=========================================== */
 
 function createBoard() {
 
@@ -85,9 +85,9 @@ function createBoard() {
 }
 
 
-/* 
+/* ===========================================
    GET CELL INDEX
- */
+=========================================== */
 
 function getIndex(x, y) {
 
@@ -96,9 +96,9 @@ function getIndex(x, y) {
 }
 
 
-/* 
+/* ===========================================
    DRAW GAME
- */
+=========================================== */
 
 function drawGame() {
 
@@ -135,9 +135,9 @@ function drawGame() {
 }
 
 
-/* 
+/* ===========================================
    RANDOM FOOD
- */
+=========================================== */
 
 function createFood() {
 
@@ -174,9 +174,9 @@ function createFood() {
 }
 
 
-/* 
+/* ===========================================
    UPDATE SCORE
- */
+=========================================== */
 
 function updateScore() {
 
@@ -198,9 +198,9 @@ function updateScore() {
 }
 
 
-/* 
+/* ===========================================
    TIMER
- */
+=========================================== */
 
 function startTimer() {
 
@@ -230,9 +230,9 @@ function startTimer() {
 }
 
 
-/* 
+/* ===========================================
    RESET GAME
- */
+=========================================== */
 
 function resetGame() {
 
@@ -261,9 +261,9 @@ function resetGame() {
 }
 
 
-/* 
+/* ===========================================
    START GAME
- */
+=========================================== */
 
 function startGame() {
 
@@ -282,27 +282,27 @@ function startGame() {
 }
 
 
-/* 
+/* ===========================================
    BUTTON EVENTS
- */
+=========================================== */
 
 startBtn.addEventListener("click", startGame);
 
 restartBtn.addEventListener("click", startGame);
 
 
-/* 
+/* ===========================================
    INITIALIZE
- */
+=========================================== */
 
 createBoard();
 
 createFood();
 
 drawGame();
-/* 
+/* ===========================================
    MOVE SNAKE
- */
+=========================================== */
 
 function moveSnake() {
 
@@ -399,9 +399,9 @@ function moveSnake() {
 
 }
 
-/* 
+/* ===========================================
    GAME OVER
- */
+=========================================== */
 
 function gameOver() {
 
@@ -417,9 +417,9 @@ function gameOver() {
 
 }
 
-/* 
+/* ===========================================
    START GAME OVERRIDE
- */
+=========================================== */
 
 const oldStartGame = startGame;
 
@@ -433,9 +433,9 @@ startGame = function () {
 
 };
 
-/* 
+/* ===========================================
    PAUSE / RESUME
- */
+=========================================== */
 
 function togglePause() {
 
@@ -474,9 +474,9 @@ function togglePause() {
 
 }
 
-/* 
+/* ===========================================
    KEYBOARD CONTROLS
- */
+=========================================== */
 
 document.addEventListener("keydown", function (e) {
 
@@ -530,8 +530,8 @@ document.addEventListener("keydown", function (e) {
 
 });
 
-/* 
+/* ===========================================
    DRAW INITIAL STATE
- */
+=========================================== */
 
 drawGame();
